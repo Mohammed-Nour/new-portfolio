@@ -24,9 +24,9 @@
 	});
 
 	function getId() {
-		const email: string = 'mo.shahin@innopolis.university';
+		const email = 'mo.shahin@innopolis.university';
 		const params = new URLSearchParams();
-		const apiUrl: string = `https://fwd.innopolis.university/api/hw2?`;
+		const apiUrl = `https://fwd.innopolis.university/api/hw2?`;
 		params.append('email', email);
 		fetch(apiUrl + params.toString())
 			.then((response) => response.json())
@@ -37,7 +37,7 @@
 
 	function getData(idResponse: IdResponse) {
 		const params = new URLSearchParams();
-		const apiUrl: string = `https://fwd.innopolis.university/api/comic?`;
+		const apiUrl = `https://fwd.innopolis.university/api/comic?`;
 		params.append('id', idResponse.toString());
 		fetch(apiUrl + params.toString())
 			.then((response) => response.json())

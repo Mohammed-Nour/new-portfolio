@@ -3,13 +3,13 @@
 	import { onMount } from 'svelte';
 
 	let ourSkillsSection: HTMLDivElement;
-	let progress: NodeListOf<HTMLSpanElement>;
+	let progress: HTMLSpanElement[] = [];
 
 	onMount(() => {
 		ourSkillsSection = document.querySelector('.our-skills') as HTMLDivElement;
-		progress = document.querySelectorAll(
-			'.our-skills .container .skills .skill .progress span'
-		) as NodeListOf<HTMLSpanElement>;
+		progress = Array.from(
+			document.querySelectorAll('.our-skills .container .skills .skill .progress span')
+		);
 
 		window.addEventListener('scroll', handleScroll);
 	});

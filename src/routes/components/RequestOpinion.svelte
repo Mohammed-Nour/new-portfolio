@@ -1,15 +1,14 @@
 <script lang="ts">
 	import discount from '../../lib/images/discount.png';
+
 	let statsSection: HTMLDivElement;
-	let numbers: NodeListOf<HTMLSpanElement>;
+	let numbers: HTMLSpanElement[] = [];
 	let check: boolean;
 	import { onMount } from 'svelte';
 
 	onMount(() => {
 		statsSection = document.querySelector('.stats') as HTMLDivElement;
-		numbers = document.querySelectorAll(
-			'.stats .container .boxes .box .number'
-		) as NodeListOf<HTMLSpanElement>;
+		numbers = Array.from(document.querySelectorAll('.stats .container .boxes .box .number'));
 		window.addEventListener('scroll', handleScroll);
 		check = false;
 	});
