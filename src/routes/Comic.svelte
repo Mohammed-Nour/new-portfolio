@@ -17,7 +17,7 @@
 		id: number;
 	}
 
-	let comicDfata: ComicData;
+	let resultComicData: ComicData | null = null;
 
 	onMount(() => {
 		getId();
@@ -42,7 +42,7 @@
 		fetch(apiUrl + params.toString())
 			.then((response) => response.json())
 			.then((comicData: ComicData) => {
-				comicDfata = {
+				resultComicData = {
 					...comicData,
 					formattedDate: moment({
 						year: comicData.year,
@@ -61,11 +61,11 @@
 
 <!-- Start comic -->
 <div id="container" class="comic-container">
-	{#if comicDfata}
-		<h2 class="main-title">{comicDfata.safe_title}</h2>
-		<p class="comic-date" id="comic-date">{comicDfata.formattedDate}</p>
-		<p class="comic-date" id="comic-date">Released {comicDfata.formattedDateFromNow}</p>
-		<img id="comic-image" src={comicDfata.img} alt={comicDfata.alt} />
+	{#if resultComicData}
+		<h2 class="main-title">{resultComicData.safe_title}</h2>
+		<p class="comic-date" id="comic-date">{resultComicData.formattedDate}</p>
+		<p class="comic-date" id="comic-date">Released {resultComicData.formattedDateFromNow}</p>
+		<img id="comic-image" src={resultComicData.img} alt={resultComicData.alt} />
 	{:else}
 		<p>Loading...</p>
 	{/if}
@@ -73,9 +73,9 @@
 
 <!-- End comic -->
 
-<style>
-	@import '../../css/main.css';
-	@import '../../css/comic.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
-</style>
+<!-- <style>
+	@import '../css/comic.css';
+	@import '../css/main.css';
+	@import '../css/Normalize.css';
+	@import '../css/all.min.css';
+</style> -->

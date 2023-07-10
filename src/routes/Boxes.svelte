@@ -1,13 +1,14 @@
 <script lang="ts">
 	import Box from './Box.svelte';
-	import firstproject from '../../lib/images/firstproject.png';
-	import secondproject from '../../lib/images/secondproject.png';
-	import thirdproject from '../../lib/images/thirdproject.png';
-	import Fourthproject from '../../lib/images/Fourthproject.png';
-	import fifthproject from '../../lib/images/fifthproject.png';
-	import sixthproject from '../../lib/images/sixthproject.png';
-	import seventhproject from '../../lib/images/seventhproject.jpg';
-	import eighthproject from '../../lib/images/eighthproject.png';
+	import firstproject from '$lib/images/firstproject.png';
+	import secondproject from '$lib/images/secondproject.png';
+	import thirdproject from '$lib/images/thirdproject.png';
+	import Fourthproject from '$lib/images/Fourthproject.png';
+	import fifthproject from '$lib/images/fifthproject.png';
+	import sixthproject from '$lib/images/sixthproject.png';
+	import seventhproject from '$lib/images/seventhproject.jpg';
+	import eighthproject from '$lib/images/eighthproject.png';
+
 	let projects = [
 		{
 			id: 1,
@@ -91,8 +92,8 @@
 
 <!-- End Articles -->
 
-<style>
-	@import './../../css/main.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
-</style>
+<!-- <style>
+	@import '../css/main.css';
+	@import '../css/Normalize.css';
+	@import '../css/all.min.css';
+</style> -->

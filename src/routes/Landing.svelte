@@ -1,5 +1,5 @@
-<script type="ts">
-	import landingImage from '../../lib/images/landing-image.png';
+<script lang="ts">
+	import landingImage from '$lib/images/landing-image.png';
 </script>
 
 <!-- Start Landing -->
@@ -23,7 +23,4 @@
 
 <!-- End Landing -->
 <style>
-	@import '../../css/main.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
 </style>

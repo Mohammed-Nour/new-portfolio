@@ -24,9 +24,9 @@
 <!-- End Box -->
 
 <style>
-	@import './../../css/main.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
+	/* @import '../css/main.css';
+	@import '../css/Normalize.css';
+	@import '../css/all.min.css'; */
 	.img {
 		text-align: center;
 	}

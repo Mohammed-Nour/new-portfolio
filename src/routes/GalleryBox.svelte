@@ -9,8 +9,4 @@
 	</div>
 </div>
 
-<style>
-	@import '../../css/main.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
-</style>
+<style></style>

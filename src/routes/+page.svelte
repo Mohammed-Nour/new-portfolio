@@ -1,12 +1,12 @@
 <script type="ts">
-	import Awseom from './components/Awseom.svelte';
-	import Boxes from './components/Boxes.svelte';
-	import Features from './components/Features.svelte';
-	import Gallery from './components/Gallery.svelte';
-	import Landing from './components/Landing.svelte';
-	import RequestOpinion from './components/RequestOpinion.svelte';
-	import Services from './components/Services.svelte';
-	import Skills from './components/Skills.svelte';
+	import Awseom from './Awseom.svelte';
+	import Boxes from './Boxes.svelte';
+	import Features from './Features.svelte';
+	import Gallery from './Gallery.svelte';
+	import Landing from './Landing.svelte';
+	import RequestOpinion from './RequestOpinion.svelte';
+	import Services from './Services.svelte';
+	import Skills from './Skills.svelte';
 </script>
 
 <svelte:head>
@@ -26,4 +26,5 @@
 <style>
 	@import './../css/main.css';
 	@import './../css/Normalize.css';
+	@import './../css/all.min.css';
 </style>

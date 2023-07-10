@@ -1,13 +1,19 @@
 <script lang="ts">
 	import GalleryBox from './GalleryBox.svelte';
-	import firstproject from '../../lib/images/firstproject.png';
-	import secondproject from '../../lib/images/secondproject.png';
-	import thirdproject from '../../lib/images/thirdproject.png';
-	import Fourthproject from '../../lib/images/Fourthproject.png';
-	import fifthproject from '../../lib/images/fifthproject.png';
-	import sixthproject from '../../lib/images/sixthproject.png';
+	import firstproject from '$lib/images/firstproject.png';
+	import secondproject from '$lib/images/secondproject.png';
+	import thirdproject from '$lib/images/thirdproject.png';
+	import Fourthproject from '$lib/images/Fourthproject.png';
+	import fifthproject from '$lib/images/fifthproject.png';
+	import sixthproject from '$lib/images/sixthproject.png';
 
-	let galleryImages = [
+	interface GalleryImage {
+		id: number;
+		image: string;
+		alt: string;
+	}
+
+	let galleryImages: GalleryImage[] = [
 		{
 			id: 1,
 			image: firstproject,
@@ -54,7 +60,4 @@
 <!-- End Gallery -->
 
 <style>
-	@import '../../css/main.css';
-	@import './../../css/Normalize.css';
-	@import './../../css/all.min.css';
 </style>
