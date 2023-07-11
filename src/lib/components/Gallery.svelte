@@ -52,7 +52,7 @@
 	<h2 class="main-title">My Gallery</h2>
 	<div class="container">
 		{#each galleryImages as image (image.id)}
-			<GalleryBox image={image.image} alt={image.alt} />
+			<GalleryBox {...image} />
 		{/each}
 	</div>
 </div>
@@ -60,4 +60,15 @@
 <!-- End Gallery -->
 
 <style>
+	.gallery {
+		background-color: #ececec;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		position: relative;
+	}
+	.gallery > .container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 40px;
+	}
 </style>

@@ -9,12 +9,20 @@
 	import seventhproject from '$lib/images/seventhproject.jpg';
 	import eighthproject from '$lib/images/eighthproject.png';
 
-	let projects = [
+	interface Project {
+		id: number;
+		image: string;
+		title: string;
+		description: string;
+		website: string;
+	}
+
+	let projects: Project[] = [
 		{
 			id: 1,
 			image: firstproject,
 			title: 'Emkan Properties',
-			description: ' Website for buying and selling real estate built using WordPress.',
+			description: 'Website for buying and selling real estate built using WordPress.',
 			website: 'https://emkanproperties.com/'
 		},
 		{
@@ -22,7 +30,7 @@
 			image: secondproject,
 			title: 'Crown Farms',
 			description:
-				' E-commerce Farms website with HTML , CSS , BootStrap , JavaScript , Jquery and Ajax and Backend Rest API built using Laravel.',
+				'E-commerce Farms website with HTML , CSS , BootStrap , JavaScript , Jquery and Ajax and Backend Rest API built using Laravel.',
 			website: 'http://test.crownfarms.ae/'
 		},
 		{
@@ -30,7 +38,7 @@
 			image: thirdproject,
 			title: 'E-Commerce website',
 			description:
-				' E-Commerce website built using Next.js , React.js , Redux State Management for managing data that come from Rest API and store it with Axios library and ANTD library also we use i18n for translation',
+				'E-Commerce website built using Next.js , React.js , Redux State Management for managing data that come from Rest API and store it with Axios library and ANTD library also we use i18n for translation',
 			website: 'https://eccomerce-zkz5.vercel.app/en'
 		},
 		{
@@ -44,14 +52,14 @@
 			id: 5,
 			image: fifthproject,
 			title: 'Template one',
-			description: ' Templates built using HTML, CSS and JavaScript to prove designing skills',
+			description: 'Templates built using HTML, CSS and JavaScript to prove designing skills',
 			website: 'https://mohammed-nour.github.io/HTML_And_CSS_Template_One/'
 		},
 		{
 			id: 6,
 			image: sixthproject,
 			title: 'Template Two',
-			description: ' Templates built using HTML, CSS and JavaScript to prove designing skills',
+			description: 'Templates built using HTML, CSS and JavaScript to prove designing skills',
 			website: 'https://mohammed-nour.github.io/HTML_And_CSS_Template_Two/'
 		},
 		{
@@ -79,12 +87,7 @@
 	<div class="container">
 		<div class="parent-of-box">
 			{#each projects as project (project.id)}
-				<Box
-					image={project.image}
-					title={project.title}
-					description={project.description}
-					website={project.website}
-				/>
+				<Box {...project} />
 			{/each}
 		</div>
 	</div>
@@ -92,8 +95,15 @@
 
 <!-- End Articles -->
 
-<!-- <style>
-	@import '../css/main.css';
-	@import '../css/Normalize.css';
-	@import '../css/all.min.css';
-</style> -->
+<style>
+	.projects {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		position: relative;
+	}
+	.projects > .container > .parent-of-box {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 40px;
+	}
+</style>

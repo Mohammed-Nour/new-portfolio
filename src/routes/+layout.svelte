@@ -1,6 +1,9 @@
 <script lang="ts">
-	import Header from './Header.svelte';
-	import Footer from './Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+	import '$lib/css/all.min.css';
+	import '$lib/css/Normalize.css';
+	import '$lib/css/main.css';
 </script>
 
 <div class="app">
@@ -14,8 +17,4 @@
 </div>
 
 <style>
-	@import '../css/main.css';
-	@import '../css/Normalize.css';
-	@import './../css/all.min.css';
-	@import './../css/comic.css';
 </style>

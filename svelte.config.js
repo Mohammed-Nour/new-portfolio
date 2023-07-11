@@ -13,14 +13,6 @@ const config = {
 		adapter: adapter(),
 		paths: {
 			base: dev ? '' : '/new-portfolio'
-		},
-		prerender: {
-			// Other prerender options...
-
-			handleHttpError: ({ error }) => {
-				// Handle the HTTP error here
-				console.error('Prerender HTTP error:', error);
-			}
 		}
 	}
 };

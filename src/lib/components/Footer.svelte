@@ -48,10 +48,10 @@
 		<div class="define">
 			<h1 class="title">About Me</h1>
 			<ul class="social-media">
-				{#each socialMediaLinks as link}
+				{#each socialMediaLinks as { id, href, icon }}
 					<li>
-						<a id={link.id} href={link.href}>
-							<i class={link.icon} />
+						<a {id} {href}>
+							<i class={icon} />
 						</a>
 					</li>
 				{/each}
@@ -75,11 +75,11 @@
 			</li>
 			<li>
 				<i class="far fa-clock fa-fw" />
-				<p>Business Hours: From 10:00 To 18:00</p>
+				<p>Business Hours: From time <time>10:00</time> To <time>18:00</time></p>
 			</li>
 			<li>
 				<i class="fas fa-phone-volume fa-fw" />
-				<p>+79770594318</p>
+				<a class="phone" href="tel:+79770594318">+79770594318</a>
 			</li>
 		</ul>
 		<div class="images">
@@ -91,10 +91,110 @@
 			<img src={sixthproject} alt="sixthproject" />
 		</div>
 	</div>
-	<p class="name">Made With Mohamad Nour Shahin</p>
+	<p class="name">Made by Mohamad Nour Shahin</p>
 </footer>
 
 <!-- End Footer -->
 
 <style>
+	footer {
+		background-color: #191919;
+		padding: 25px 0;
+		color: #ccc;
+	}
+	footer > .container {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 30px;
+	}
+	footer > .container > .define > .title {
+		font-size: 60px;
+		letter-spacing: -2px;
+	}
+	footer > .container > .define > .social-media {
+		display: flex;
+		gap: 10px;
+	}
+	footer > .container > .define > .social-media > li {
+		background-color: #313131;
+		padding: 10px;
+		margin-top: -25px;
+		width: 50px;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 8px;
+	}
+	footer > .container > .define > .social-media > li > a > i {
+		color: #ccc;
+	}
+	footer > .container > .define > .content {
+		line-height: 2;
+		margin: 25px 0;
+	}
+	footer > .container > .links {
+		padding: 60px 0;
+	}
+	footer > .container > .links > li {
+		border-bottom: 1px solid #444;
+		padding: 15px 20px;
+	}
+	footer > .container > .links > li > a {
+		position: relative;
+		padding-left: 5px;
+		color: #ccc !important;
+		transition: 0.3s;
+	}
+	.phone {
+		color: #ccc !important;
+	}
+	footer > .container > .links > li > a:hover {
+		transform: translateX(10px);
+	}
+	footer > .container > .links > li > a::before {
+		font-family: 'Font Awesome 5 Free';
+		content: '\F101';
+		font-weight: 900;
+		position: absolute;
+		left: -20px;
+		top: 0px;
+		width: 50px;
+		color: #2196f3;
+	}
+	footer > .container > .info {
+		padding: 65px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+	}
+	footer > .container > .info > li {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	footer > .container > .info > li > i {
+		color: #2196f3;
+		font-size: 25px;
+	}
+	footer > .container > .info > li > p {
+		line-height: 1.8;
+		font-size: 16px;
+	}
+	footer > .container > .images {
+		padding: 65px 0px;
+	}
+	footer > .container > .images > img {
+		width: 75px;
+		max-width: 75px;
+		border: 3px solid white;
+		margin-left: 5px;
+		margin-bottom: 5px;
+	}
+	footer > .name {
+		padding: 15px 0px;
+		text-align: center;
+		border-top: 1px solid #444;
+		margin: 10px auto;
+		transform: translateY(50%);
+	}
+	/* End Footer */
 </style>
