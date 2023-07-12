@@ -1,5 +1,5 @@
 <script type="ts">
-	import Awseom from '$lib/components/Awseom.svelte';
+	import Awesome from '$lib/components/Awesome.svelte';
 	import Boxes from '$lib/components/Boxes.svelte';
 	import Features from '$lib/components/Features.svelte';
 	import Gallery from '$lib/components/Gallery.svelte';
@@ -20,7 +20,7 @@
 <Features />
 <Services />
 <Skills />
-<Awseom />
+<Awesome />
 <RequestOpinion />
 
 <style>
